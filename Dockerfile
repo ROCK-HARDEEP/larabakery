@@ -27,6 +27,7 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Copy application files
 COPY . .
 
+RUN composer update
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
