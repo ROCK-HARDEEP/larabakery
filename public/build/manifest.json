@@ -1,0 +1,24 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-DOVdMTjE.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/css/filament-fixes.css": {
+    "file": "assets/filament-fixes-aecKVT4F.css",
+    "src": "resources/css/filament-fixes.css",
+    "isEntry": true,
+    "names": [
+      "filament-fixes.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-D7r182B2.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}

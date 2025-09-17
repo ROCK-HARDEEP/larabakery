@@ -1,0 +1,532 @@
+/* Enhanced Admin Panel Design */
+
+/* Custom Color Scheme */
+:root {
+    --primary-color: #f59e0b;
+    --primary-dark: #d97706;
+    --secondary-color: #10b981;
+    --accent-color: #3b82f6;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --success-color: #10b981;
+    --info-color: #3b82f6;
+}
+
+/* Enhanced Navigation */
+.filament-sidebar {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.filament-sidebar .filament-sidebar-nav {
+    padding: 1rem 0;
+}
+
+.filament-sidebar .filament-sidebar-nav-item {
+    margin: 0.25rem 1rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.filament-sidebar .filament-sidebar-nav-item:hover {
+    background: rgba(245, 158, 11, 0.1);
+    transform: translateX(4px);
+}
+
+.filament-sidebar .filament-sidebar-nav-item.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+/* Enhanced Cards */
+.filament-card {
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.filament-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Enhanced Buttons */
+.filament-btn {
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filament-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.filament-btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border: none;
+}
+
+.filament-btn-success {
+    background: linear-gradient(135deg, var(--success-color), #059669);
+    border: none;
+}
+
+.filament-btn-danger {
+    background: linear-gradient(135deg, var(--danger-color), #dc2626);
+    border: none;
+}
+
+/* Enhanced Tables */
+.filament-table {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.filament-table thead {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+}
+
+.filament-table th {
+    font-weight: 700;
+    color: #374151;
+    padding: 1rem;
+}
+
+.filament-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.filament-table tbody tr:hover {
+    background: rgba(245, 158, 11, 0.05);
+}
+
+/* Enhanced Forms */
+.filament-form-component {
+    border-radius: 0.75rem;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.filament-form-component:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+/* Enhanced Stats Cards */
+.stats-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.stats-card-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+}
+
+.stats-card-success {
+    background: linear-gradient(135deg, var(--success-color), #059669);
+    color: white;
+}
+
+.stats-card-info {
+    background: linear-gradient(135deg, var(--info-color), #2563eb);
+    color: white;
+}
+
+.stats-card-warning {
+    background: linear-gradient(135deg, var(--warning-color), #d97706);
+    color: white;
+}
+
+/* Enhanced Dashboard */
+.dashboard-header {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Enhanced Navigation Groups */
+.filament-sidebar-group {
+    margin-bottom: 1.5rem;
+}
+
+.filament-sidebar-group-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+}
+
+/* Enhanced Badges */
+.filament-badge {
+    border-radius: 9999px;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Enhanced Modals */
+.filament-modal {
+    border-radius: 1rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.filament-modal-header {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1.5rem;
+}
+
+.filament-modal-body {
+    padding: 1.5rem;
+}
+
+/* Enhanced File Upload */
+.filament-file-upload {
+    border: 2px dashed #d1d5db;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.filament-file-upload:hover {
+    border-color: var(--primary-color);
+    background: rgba(245, 158, 11, 0.05);
+}
+
+/* Enhanced Loading States */
+.filament-loading {
+    background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-title {
+        font-size: 2rem;
+    }
+    
+    .stats-card {
+        padding: 1rem;
+    }
+    
+    .filament-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .filament-sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .filament-card {
+        background: #1f2937;
+        border-color: #374151;
+    }
+    
+    .filament-table thead {
+        background: linear-gradient(135deg, #374151, #4b5563);
+    }
+    
+    .filament-form-component {
+        background: #374151;
+        border-color: #4b5563;
+    }
+    
+    .dashboard-header {
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    }
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Enhanced Tooltips */
+.filament-tooltip {
+    background: #1f2937;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Notifications */
+.filament-notification {
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: none;
+}
+
+.filament-notification-success {
+    background: linear-gradient(135deg, var(--success-color), #059669);
+    color: white;
+}
+
+.filament-notification-error {
+    background: linear-gradient(135deg, var(--danger-color), #dc2626);
+    color: white;
+}
+
+.filament-notification-warning {
+    background: linear-gradient(135deg, var(--warning-color), #d97706);
+    color: white;
+}
+
+.filament-notification-info {
+    background: linear-gradient(135deg, var(--info-color), #2563eb);
+    color: white;
+}
+
+/* Filament 3 Specific Enhancements */
+.fi-sidebar {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%) !important;
+}
+
+.fi-sidebar-nav {
+    padding: 1rem 0 !important;
+}
+
+.fi-sidebar-nav-item {
+    margin: 0.25rem 1rem !important;
+    border-radius: 0.75rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.fi-sidebar-nav-item:hover {
+    background: rgba(245, 158, 11, 0.1) !important;
+    transform: translateX(4px) !important;
+}
+
+.fi-sidebar-nav-item.fi-active {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3) !important;
+}
+
+.fi-card {
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease !important;
+}
+
+.fi-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+.fi-btn {
+    border-radius: 0.75rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.fi-btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+.fi-btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
+    border: none !important;
+}
+
+.fi-btn-success {
+    background: linear-gradient(135deg, var(--success-color), #059669) !important;
+    border: none !important;
+}
+
+.fi-btn-danger {
+    background: linear-gradient(135deg, var(--danger-color), #dc2626) !important;
+    border: none !important;
+}
+
+.fi-table {
+    border-radius: 1rem !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.fi-table thead {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9) !important;
+}
+
+.fi-table th {
+    font-weight: 700 !important;
+    color: #374151 !important;
+    padding: 1rem !important;
+}
+
+.fi-table td {
+    padding: 1rem !important;
+    border-bottom: 1px solid #e5e7eb !important;
+}
+
+.fi-table tbody tr:hover {
+    background: rgba(245, 158, 11, 0.05) !important;
+}
+
+/* Form Enhancements */
+.fi-fo-field-wrp {
+    border-radius: 0.75rem !important;
+    border: 2px solid #e5e7eb !important;
+    transition: all 0.3s ease !important;
+}
+
+.fi-fo-field-wrp:focus-within {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1) !important;
+}
+
+/* Stats Widget Enhancements */
+.fi-wi-stats-overview {
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.fi-wi-stats-overview .fi-wi-stats-overview-stat {
+    border-radius: 0.75rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.fi-wi-stats-overview .fi-wi-stats-overview-stat:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Chart Widget Enhancements */
+.fi-wi-chart {
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    padding: 1.5rem !important;
+}
+
+/* Table Widget Enhancements */
+.fi-wi-table {
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    overflow: hidden !important;
+}
+
+/* Modal Enhancements */
+.fi-modal {
+    border-radius: 1rem !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2) !important;
+}
+
+.fi-modal-header {
+    border-bottom: 1px solid #e5e7eb !important;
+    padding: 1.5rem !important;
+}
+
+.fi-modal-body {
+    padding: 1.5rem !important;
+}
+
+/* File Upload Enhancements */
+.fi-fo-file-upload {
+    border: 2px dashed #d1d5db !important;
+    border-radius: 1rem !important;
+    padding: 2rem !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+}
+
+.fi-fo-file-upload:hover {
+    border-color: var(--primary-color) !important;
+    background: rgba(245, 158, 11, 0.05) !important;
+}
+
+/* Badge Enhancements */
+.fi-badge {
+    border-radius: 9999px !important;
+    font-weight: 600 !important;
+    padding: 0.25rem 0.75rem !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Notification Enhancements */
+.fi-notification {
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    border: none !important;
+}
+
+.fi-notification-success {
+    background: linear-gradient(135deg, var(--success-color), #059669) !important;
+    color: white !important;
+}
+
+.fi-notification-error {
+    background: linear-gradient(135deg, var(--danger-color), #dc2626) !important;
+    color: white !important;
+}
+
+.fi-notification-warning {
+    background: linear-gradient(135deg, var(--warning-color), #d97706) !important;
+    color: white !important;
+}
+
+.fi-notification-info {
+    background: linear-gradient(135deg, var(--info-color), #2563eb) !important;
+    color: white !important;
+}

@@ -1,0 +1,239 @@
+/* Emergency Filament CSS Fixes */
+
+/* Reset icon sizes to prevent huge icons */
+svg {
+    max-width: 1.5rem !important;
+    max-height: 1.5rem !important;
+}
+
+.fi-sidebar-nav-item-icon svg,
+.fi-topbar-item svg,
+.fi-icon svg,
+.fi-btn svg,
+.fi-dropdown-trigger svg,
+.fi-ta-icon svg {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+}
+
+/* Fix layout issues */
+.fi-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.fi-sidebar {
+    width: 16rem;
+    background-color: rgb(17 24 39);
+    flex-shrink: 0;
+}
+
+.fi-main {
+    flex: 1;
+    background-color: rgb(249 250 251);
+    padding: 2rem;
+}
+
+/* Fix navigation items */
+.fi-sidebar-nav-item {
+    margin: 0.25rem 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    color: rgb(209 213 219);
+    text-decoration: none;
+}
+
+.fi-sidebar-nav-item:hover {
+    background-color: rgb(31 41 55);
+}
+
+.fi-sidebar-nav-item.fi-active {
+    background-color: rgb(245 158 11);
+    color: white;
+}
+
+/* Fix form inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgb(209 213 219);
+    border-radius: 0.375rem;
+    width: 100%;
+    font-size: 0.875rem;
+}
+
+/* Fix buttons */
+.fi-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fi-btn-color-primary {
+    background-color: rgb(245 158 11);
+    color: white;
+}
+
+.fi-btn-color-primary:hover {
+    background-color: rgb(217 119 6);
+}
+
+/* Fix tables */
+.fi-ta-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.fi-ta-table th {
+    padding: 0.75rem;
+    text-align: left;
+    background-color: rgb(249 250 251);
+    border-bottom: 1px solid rgb(229 231 235);
+}
+
+.fi-ta-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid rgb(243 244 246);
+}
+
+/* Fix cards/sections */
+.fi-section {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+/* Fix modals */
+.fi-modal-window {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    max-width: 42rem;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+/* Dark mode fixes */
+.dark .fi-sidebar {
+    background-color: rgb(3 7 18);
+}
+
+.dark .fi-main {
+    background-color: rgb(17 24 39);
+}
+
+.dark .fi-section {
+    background-color: rgb(31 41 55);
+    color: white;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+    background-color: rgb(17 24 39);
+    border-color: rgb(75 85 99);
+    color: white;
+}
+
+/* Fix dropdown menus */
+.fi-dropdown-list {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    min-width: 12rem;
+}
+
+/* Ensure text is readable */
+.fi-body {
+    color: rgb(17 24 39);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.dark .fi-body {
+    color: rgb(243 244 246);
+}
+
+/* Fix header */
+.fi-header {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgb(229 231 235);
+}
+
+.dark .fi-header {
+    background: rgb(31 41 55);
+    border-bottom-color: rgb(55 65 81);
+}
+
+/* Fix breadcrumbs */
+.fi-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: rgb(107 114 128);
+}
+
+/* Fix stats widgets */
+.fi-wi-stats-overview-stat {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dark .fi-wi-stats-overview-stat {
+    background: rgb(31 41 55);
+}
+
+/* Fix badges */
+.fi-badge {
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Fix notifications */
+.fi-no-notification {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Responsive fixes */
+@media (max-width: 1024px) {
+    .fi-sidebar {
+        position: fixed;
+        left: -16rem;
+        height: 100vh;
+        z-index: 40;
+        transition: left 0.3s ease;
+    }
+    
+    .fi-sidebar.fi-sidebar-open {
+        left: 0;
+    }
+    
+    .fi-main {
+        margin-left: 0;
+    }
+}

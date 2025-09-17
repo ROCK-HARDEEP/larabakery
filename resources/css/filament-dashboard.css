@@ -1,0 +1,23 @@
+/* Filament Dashboard Custom Styles */
+@import "tailwindcss";
+
+/* Custom dashboard styles */
+.dashboard-widget {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+}
+
+.dashboard-widget:hover {
+    @apply shadow-md transition-shadow duration-200;
+}
+
+/* Performance optimizations */
+.widget-loading {
+    @apply animate-pulse;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .dashboard-widget {
+        @apply p-4;
+    }
+}

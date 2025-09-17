@@ -1,0 +1,195 @@
+/* Filament Dashboard Custom Styles */
+
+/* Full width container */
+.fi-page-dashboard .fi-section-content {
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+/* Stats cards - ensure they span properly */
+.fi-wi-stats-overview-stats {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 1rem !important;
+    width: 100% !important;
+}
+
+/* Make stats cards equal height */
+.fi-wi-stats-overview-stat {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Sales Analytics - full width with better spacing */
+.fi-wi-chart {
+    width: 100% !important;
+}
+
+.fi-wi-chart canvas {
+    max-height: 400px !important;
+}
+
+/* Tables - better use of space */
+.fi-ta-table {
+    width: 100%;
+}
+
+.fi-ta-table thead th {
+    background: #f9fafb;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* Dark mode table headers - Enhanced visibility */
+.dark .fi-ta-table thead th {
+    background: linear-gradient(135deg, #374151, #4b5563) !important;
+    color: #f3f4f6 !important;
+    font-weight: 600 !important;
+    border-bottom: 1px solid #6b7280 !important;
+}
+
+/* Alternative selector for Filament table headers */
+.dark .fi-table thead th,
+.dark .fi-ta-header-cell,
+.dark th.fi-ta-header-cell {
+    background: linear-gradient(135deg, #374151, #4b5563) !important;
+    color: #f3f4f6 !important;
+}
+
+/* Ensure header text is visible */
+.dark .fi-ta-header-cell-label,
+.dark .fi-ta-header-cell button,
+.dark .fi-ta-header-cell span,
+.dark .fi-ta-header-cell div {
+    color: #f3f4f6 !important;
+}
+
+/* Sortable column headers in dark mode */
+.dark .fi-ta-header-cell button:hover {
+    color: #fbbf24 !important;
+    background: rgba(251, 191, 36, 0.1) !important;
+}
+
+/* Table row styles for better contrast */
+.dark .fi-ta-row,
+.dark .fi-table tbody tr {
+    border-bottom: 1px solid #374151;
+}
+
+.dark .fi-ta-row:hover,
+.dark .fi-table tbody tr:hover {
+    background: rgba(75, 85, 99, 0.3) !important;
+}
+
+/* Pages module table hover fix - ensure transparent overlay instead of white */
+.fi-page .fi-ta-row:hover,
+.fi-page .fi-table tbody tr:hover,
+.fi-simple-page .fi-ta-row:hover,
+.fi-simple-page .fi-table tbody tr:hover,
+[class*="manage-"] .fi-ta-row:hover,
+[class*="manage-"] .fi-table tbody tr:hover {
+    background: rgba(245, 158, 11, 0.05) !important;
+    color: inherit !important;
+}
+
+/* Dark mode Pages module table hover */
+.dark .fi-page .fi-ta-row:hover,
+.dark .fi-page .fi-table tbody tr:hover,
+.dark .fi-simple-page .fi-ta-row:hover,
+.dark .fi-simple-page .fi-table tbody tr:hover,
+.dark [class*="manage-"] .fi-ta-row:hover,
+.dark [class*="manage-"] .fi-table tbody tr:hover {
+    background: rgba(75, 85, 99, 0.3) !important;
+    color: inherit !important;
+}
+
+/* Prevent any white background on hover for all table rows */
+.fi-ta-row:hover,
+.fi-table tbody tr:hover,
+.filament-tables-row:hover {
+    background-color: rgba(245, 158, 11, 0.05) !important;
+}
+
+/* Dark mode - prevent white text on hover */
+.dark .fi-ta-row:hover *,
+.dark .fi-table tbody tr:hover *,
+.dark .filament-tables-row:hover * {
+    color: inherit !important;
+}
+
+/* Dashboard grid adjustments */
+@media (min-width: 1024px) {
+    .fi-page-dashboard .grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .fi-page-dashboard {
+        padding: 1.5rem;
+    }
+    
+    .fi-page-dashboard .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .fi-page-dashboard {
+        padding: 2rem;
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+/* Remove extra padding from widgets */
+.fi-widget {
+    margin-bottom: 0 !important;
+}
+
+.fi-section-content > div > div {
+    gap: 1.5rem !important;
+}
+
+/* Chart container optimization */
+.fi-chart-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 0 !important;
+}
+
+/* Ensure Recent Orders table uses full width */
+.fi-ta-col-wrp {
+    overflow-x: auto;
+}
+
+/* Stats cards hover effect */
+.fi-wi-stats-overview-stat:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Better chart tooltips */
+.chart-tooltip {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .fi-wi-stats-overview-stats {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .fi-wi-stats-overview-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}

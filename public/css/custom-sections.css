@@ -1,0 +1,100 @@
+/* Custom Sections Responsive Styles */
+
+/* Mobile First Approach */
+.custom-section {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.custom-section img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 400px;
+}
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+    .hero-section {
+        min-height: 500px;
+    }
+    
+    .custom-section .grid {
+        align-items: stretch;
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    .hero-section {
+        min-height: 600px;
+    }
+    
+    /* Full width image sections */
+    .custom-section > div:first-child img {
+        width: 100vw;
+        max-width: none;
+        margin-left: calc(-50vw + 50%);
+    }
+}
+
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+    .hero-section {
+        min-height: 700px;
+    }
+}
+
+/* Ensure images cover full width */
+.custom-section .w-full {
+    width: 100% !important;
+}
+
+/* Object-fit fallback for older browsers */
+@supports not (object-fit: cover) {
+    .custom-section img {
+        min-width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+    .custom-section h1 {
+        font-size: 2rem !important;
+    }
+    
+    .custom-section h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .custom-section h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    .custom-section .prose {
+        font-size: 0.95rem;
+    }
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 640px) {
+    .custom-section .px-8 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .custom-section .py-12 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
