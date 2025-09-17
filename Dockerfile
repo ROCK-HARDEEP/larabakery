@@ -16,9 +16,9 @@ RUN apt-get update && apt-get install -y \
     unzip \
     git \
     curl \
-    && docker-php-ext-configure zip --with-libzip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) intl zip gd exif pdo pdo_mysql
+
 
 
 # Install Composer globally
