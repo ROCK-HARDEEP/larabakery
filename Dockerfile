@@ -1,5 +1,5 @@
 # Nginx + PHP-FPM in one image (Debian, maintained)
-FROM webdevops/php-nginx:8.2
+FROM webdevops/php-nginx:8.3
 
 # Set doc root to Laravel public
 ENV WEB_DOCUMENT_ROOT=/var/www/public
