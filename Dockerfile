@@ -4,6 +4,7 @@ FROM php:8.2-fpm
 # Set working directory
 WORKDIR /var/www
 
+# Install system dependencies and PHP extensions
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     libpng-dev \
@@ -19,18 +20,15 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) intl zip gd exif pdo pdo_mysql
 
-
-
 # Install Composer globally
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 # Copy application files
 COPY . .
 
-RUN composer update
-
-# Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader
+# Update and install PHP dependencies
+RUN composer update --no-interaction --prefer-dist --optimize-autoloader \
+    && composer install --no-dev --optimize-autoloader
 
 # Generate Laravel application key
 RUN php artisan key:generate
