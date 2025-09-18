@@ -3,7 +3,7 @@ FROM php:8.2-fpm
 
 # Set working directory
 WORKDIR /var/www
-RUN composer update
+
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     libpng-dev \
@@ -27,6 +27,7 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Copy application files
 COPY . .
 
+RUN composer update
 
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
